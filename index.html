@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Plataforma ONG — Protótipo SPA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <div class="logo">ONG</div>
+        <div>
+          <div class="title">Plataforma ONG</div>
+          <div class="subtitle">Protótipo front-end — SPA</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home" class="nav-link">Início</a>
+        <a href="#projects" class="nav-link">Projetos</a>
+        <a href="#volunteer" class="nav-link">Voluntários</a>
+        <a href="#donate" class="nav-link">Doar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <h1>Conectando ONGs, doadores e voluntários</h1>
+      <p>Gerencie projetos, aceite doações simuladas e registre voluntários — SPA dinâmica, responsiva e acessível.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projetos Ativos</h2>
+      <div id="projects-grid" class="grid"></div>
+    </section>
+
+    <section id="volunteer">
+      <h2>Seja voluntário</h2>
+      <form id="vol-form">
+        <label for="v-name">Nome completo</label>
+        <input id="v-name" type="text" required>
+        <label for="v-email">Email</label>
+        <input id="v-email" type="email" required>
+        <label for="v-skill">Habilidades / Disponibilidade</label>
+        <textarea id="v-skill"></textarea>
+        <button type="submit">Quero ajudar</button>
+      </form>
+      <div id="vol-list"></div>
+      <div>Voluntários cadastrados: <span id="metric-vols">0</span></div>
+    </section>
+
+    <section id="donate">
+      <h2>Doações</h2>
+      <form id="donate-form">
+        <label for="d-name">Nome (opcional)</label>
+        <input id="d-name" type="text">
+        <label for="d-amount">Valor (R$)</label>
+        <input id="d-amount" type="text" required>
+        <button type="submit">Doar</button>
+      </form>
+      <div>Total arrecadado: R$ <span id="metric-donations">0,00</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Protótipo acadêmico — SPA dinâmica</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

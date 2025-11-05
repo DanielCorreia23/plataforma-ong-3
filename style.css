@@ -1,0 +1,42 @@
+/* Variáveis e sistema de cores */
+:root {
+  --primary: #2563eb;
+  --secondary: #10b981;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --neutral-1: #f6f7fb;
+  --neutral-2: #ffffff;
+  --neutral-3: #6b7280;
+  --neutral-4: #0f172a;
+  --gap: 16px;
+}
+
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: var(--neutral-1); color: var(--neutral-4); line-height: 1.5; }
+
+/* Layout principal */
+.container { max-width: 1200px; margin: 0 auto; padding: var(--gap); }
+header { background: var(--neutral-2); padding: var(--gap); display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+header nav a { margin-left: 16px; text-decoration: none; color: var(--neutral-4); font-weight: 500; }
+header nav a:hover { color: var(--primary); }
+
+/* Seções */
+section { padding: 40px 0; }
+section h2 { margin-bottom: 16px; color: var(--primary); }
+
+/* Projetos */
+.project-card { background: var(--neutral-2); border-radius: 8px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.project-card img { width: 100%; border-radius: 8px; margin-bottom: 8px; }
+
+/* Formulários */
+form { display: flex; flex-direction: column; gap: 12px; background: var(--neutral-2); padding: 16px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+input, textarea, select { padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+button { background: var(--primary); color: #fff; border: none; padding: 10px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; }
+button:hover { background: var(--secondary); }
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .project-card { display: inline-block; width: calc(33% - 16px); margin-right: 16px; vertical-align: top; }
+  .project-card:nth-child(3n) { margin-right: 0; }
+}
